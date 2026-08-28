@@ -49,7 +49,7 @@ public class LoginTest {
     //--------------------------------------
     private void login(String username, String password){   // private method — only used inside this class
                                                             // takes username and password as parameters
-                                                            // reusable — called by multiple tests below
+                                                            // reusable — called by multiple com.course.tests below
     driver.get(URL);
         // Wait for page to load then fill fields
 

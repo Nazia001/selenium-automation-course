@@ -1,6 +1,5 @@
-package tests;
+package com.course.tests;
 
-import dev.failsafe.internal.util.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -8,8 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.HomePageFactory;
-import pages.LoginPageFactory;
+import com.course.pages.HomePageFactory;
+import com.course.pages.LoginPageFactory;
 
 public class LoginFactoryTest {
     WebDriver driver;

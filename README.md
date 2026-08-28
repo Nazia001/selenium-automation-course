@@ -23,7 +23,7 @@ src/test/java/com/course/
 ├── LocatorsTest.java            # Day 3: All locator strategies
 ├── ElementInteractionsTest.java # Day 4: Click, type, dropdown, alerts
 ├── WaitsTest.java               # Day 5: Implicit, Explicit, FluentWait
-└── LoginTest.java               # Day 6: Mini project - E2E login tests
+└── LoginTest.java               # Day 6: Mini project - E2E login com.course.tests
 ```
 
 ## ✅ Test Coverage
@@ -41,7 +41,7 @@ src/test/java/com/course/
 - Maven 3.9+
 - Chrome browser
 
-### Run all tests
+### Run all com.course.tests
 ```bash
 mvn clean test
 ```

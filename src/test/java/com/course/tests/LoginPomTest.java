@@ -1,4 +1,4 @@
-package tests;
+package com.course.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -7,8 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.HomePage;
-import pages.LoginPage;
+import com.course.pages.HomePage;
+import com.course.pages.LoginPage;
 
 public class LoginPomTest {
 
@@ -24,7 +24,7 @@ public class LoginPomTest {
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
-        // page objects created once, used across all tests
+        // page objects created once, used across all com.course.tests
     }
 
     @AfterEach
