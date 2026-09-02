@@ -2,17 +2,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Selenium Course Suite" verbose="1">
-    <!--  ↑ suite = the entire collection of com.course.tests              -->
-    <!--  ↑ name  = display name in reports                     -->
-    <!--  ↑ verbose = how much detail to print (1=normal)       -->
+    <!--  suite = the entire collection of com.course.tests              -->
+    <!--  name  = display name in reports                     -->
+    <!--  verbose = how much detail to print (1=normal)       -->
 
     <test name="Login Tests">
-        <!--  ↑ test = a group of test classes                  -->
-        <!--  ↑ you can have multiple <test> blocks             -->
+        <!--  test = a group of test classes                  -->
+        <!--  you can have multiple <test> blocks             -->
 
         <classes>
             <class name="com.course.tests.LoginTestng"/>
-            <!--  ↑ full package path to your test class   -->
+            <!--  full package path to your test class   -->
+        </classes>
+    </test>
+
+    <test name="Data Driven Tests">
+        <classes>
+            <class name="com.course.tests.DataDrivenTest"/>
         </classes>
     </test>
 
