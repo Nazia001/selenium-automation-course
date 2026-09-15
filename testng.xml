@@ -6,19 +6,31 @@
     <!--  name  = display name in reports                     -->
     <!--  verbose = how much detail to print (1=normal)       -->
 
-    <test name="Login Tests">
-        <!--  test = a group of test classes                  -->
-        <!--  you can have multiple <test> blocks             -->
+    <listeners>
+        <listener class-name="com.course.utils.ExtentTestNGListener"/>
+    </listeners>
 
+     <!-- Run Smoke Tests only -->
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>  <!--only smoke tests run here -->
+            </run>
+        </groups>
         <classes>
             <class name="com.course.tests.LoginTestng"/>
-            <!--  full package path to your test class   -->
         </classes>
     </test>
 
-    <test name="Data Driven Tests">
+    <!-- Run Regression Tests only -->
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <classes>
-            <class name="com.course.tests.DataDrivenTest"/>
+            <class name="com.course.tests.LoginTestng"/>
         </classes>
     </test>
 

@@ -15,22 +15,25 @@ public class LoginTestng {
     LoginPageFactory loginPage;
     HomePageFactory homePage;
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void setUp(){
+
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         loginPage = new LoginPageFactory(driver);
         homePage = new HomePageFactory(driver);
     }
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void tearDown(){
         if(driver != null){
             driver.quit();
         }
     }
 
-    @Test (priority = 1, description = "Verify successful login with valid credentials")
+    @Test (priority = 1,
+            groups = {"smoke", "regression"},
+            description = "Verify successful login with valid credentials")
 
     public void successfulLoginTest(){
         loginPage.navigateTo();
@@ -45,7 +48,9 @@ public class LoginTestng {
         // TestNG: assertEquals(actual, expected) ← actual FIRST
     }
 
-    @Test (priority = 2, description = "wrong password test")
+    @Test (priority = 2,
+            groups = {"regression"},
+            description = "wrong password test")
     public void wrongPasswordTest(){
         loginPage.navigateTo();
         loginPage.login("student","123");
@@ -56,7 +61,9 @@ public class LoginTestng {
         Assert.assertTrue(error.contains("Your password is invalid!"),"Expected password error!");
     }
 
-    @Test (priority = 3, description = "wrong username test")
+    @Test (priority = 3,
+            groups = "regression",
+            description = "wrong username test")
 
     public void wrongUsernameTest(){
         loginPage.navigateTo();
@@ -67,7 +74,9 @@ public class LoginTestng {
         Assert.assertTrue(error.contains("Your username is invalid!"), "Expected username error!");
     }
 
-    @Test (priority = 4, description = "Empty Credentials Test")
+    @Test (priority = 4,
+            groups = {"regression", "negative"},
+            description = "Empty Credentials Test")
 
     public void emptyFieldsTest(){
         loginPage.navigateTo();

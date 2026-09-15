@@ -11,3 +11,7 @@ Thumbs.db
 
 # Screenshots — folder tracked but not the images
 screenshots/*.png
+
+# Reports - keep folder but not generated HTML
+reports/*.html
+reports/*.xml
