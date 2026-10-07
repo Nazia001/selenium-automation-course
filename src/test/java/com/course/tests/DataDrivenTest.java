@@ -16,7 +16,7 @@ public class DataDrivenTest {
     LoginPageFactory loginPage;
     HomePageFactory homePage;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -25,7 +25,7 @@ public class DataDrivenTest {
         homePage = new HomePageFactory(driver);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown(){
         if(driver != null){
             driver.quit();

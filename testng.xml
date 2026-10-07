@@ -19,6 +19,7 @@
         </groups>
         <classes>
             <class name="com.course.tests.LoginTestng"/>
+            <class name="com.course.tests.MultiPageTest"/>
         </classes>
     </test>
 
@@ -31,6 +32,8 @@
         </groups>
         <classes>
             <class name="com.course.tests.LoginTestng"/>
+            <class name="com.course.tests.DataDrivenTest"/>
+            <class name="com.course.tests.MultiPageTest"/>
         </classes>
     </test>
 
