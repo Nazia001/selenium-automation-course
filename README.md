@@ -1,8 +1,6 @@
 # Selenium Java Automation Framework
 
-A structured Selenium WebDriver automation course project built with Java,
-Maven, and JUnit 5 — covering locators, interactions, waits, Page Object
-Model, CI/CD with GitHub Actions, and Docker + Selenium Grid.
+A Java-based Selenium WebDriver automation project that evolved from JUnit 5 fundamentals into a TestNG-based automation framework, demonstrating Page Object Model, data-driven testing, test grouping, reporting, screenshots, and CI/CD concepts.
 
 ## 🛠️ Tech Stack
 
